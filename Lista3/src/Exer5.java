@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Exer5
 {
 
-    public static void Main(String[] args)
+    public static void main(String[] args)
     {
 
         Scanner leia = new Scanner(System.in);
