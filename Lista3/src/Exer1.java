@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class Exer1 {
     public static void main(String[] args) {
 
         int contador = 1;
