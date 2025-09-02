@@ -7,6 +7,11 @@ public class Exer1L4 {
 
         float SALDO = 1000, NMRL;
         int OPC;
+
+        String[] EXT = new String[1000];
+
+        int IND = 0;
+
         do {
 
 
@@ -17,7 +22,7 @@ public class Exer1L4 {
             if(OPC > 4 || OPC < 0)
             {
 
-                System.out.println("Opção inválida!");
+                System.out.println("\n\nOpção inválida!");
 
             }
 
@@ -34,6 +39,9 @@ public class Exer1L4 {
 
                     System.out.println("\nDepósito realizado com sucesso!");
 
+                    EXT[IND] = "Depósito de R$" + NMRL;
+                    IND++;
+
                     break;
 
                 case 3:
@@ -44,17 +52,26 @@ public class Exer1L4 {
                     {
                         SALDO = SALDO - NMRL;
 
-                        System.out.println("Saque realizado com sucesso!");
+                        System.out.println("\nSaque realizado com sucesso!");
 
+                        EXT[IND] = "Saque de R$" + NMRL;
+                        IND++;
                     }
 
                     else
                     {
-                        System.out.println("\n\nSaldo insuficiente!");
+                        System.out.println("\nSaldo insuficiente!");
                     }
                     break;
 
                 case 4:
+
+                    System.out.println("\n\n");
+                    for(int I = 0 ; I < IND ; I++)
+                    {
+                        System.out.println(EXT[I]);
+                    }
+
                     System.out.println("\n\n");
                     break;
 
@@ -63,7 +80,7 @@ public class Exer1L4 {
 
         }while(OPC != 0);
 
-        System.out.println("Programa finalizado.");
+        System.out.println("\n\n\nPrograma finalizado.");
 
         }
     }
