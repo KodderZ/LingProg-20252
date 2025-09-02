@@ -5,8 +5,20 @@ public class Exer2L4 {
 
         Scanner leia = new Scanner(System.in);
 
-        String[] VET = new String[10];
+        int[] VET = new int[10];
 
+
+        for(int I = 0 ; I < VET.length ; I++)
+        {
+            VET[I] = (int) (Math.random() * 21);
+        }
+
+
+        System.out.println("\nElementos do Vetor:\n");
+        for (int I = 0 ; I < VET.length ; I++)
+        {
+            System.out.println(VET[I] + " ");
+        }
 
 
     }
