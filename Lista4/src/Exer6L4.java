@@ -4,35 +4,28 @@ public class Exer6L4 {
 
     public static void main(String[] args) {
 
-        int[] VET = new int[15];
-
-        int NMR;
-
-        Scanner leia = new Scanner(System.in);
-
-        for(int I = 0 ; I < 15 ; I++)
-        {
-            VET[I] = (int) (Math.random() * 50);
+        Scanner entrada = new Scanner(System.in);
+        int[] vetor = new int[15];
+        int busca;
+        int cont = 0;
+        int indice;
+        for (int i = 0; i < vetor.length; i++) {
+            System.out.println("Digite um número: ");
+            vetor[i] = entrada.nextInt();
         }
 
-        System.out.println("Digite um número, entre 0 a 50, a ser buscado no Vetor:");
-        NMR = leia.nextInt();
-
-        for(int I = 0 ; I < 15 ; I++)
-        {
-            if(NMR == VET[I])
-            {
-                System.out.println("O número " + NMR + " existe no Vetor e está na(s) posição(ões):");
-
+        System.out.println("Digite um número para ser buscado: ");
+        busca = entrada.nextInt();
+        for (int x = 0; x < vetor.length; x++) {
+            if (busca == vetor[x]) {
+                indice = x;
+                System.out.println("Número encontrado! | Posição: " + indice);
+                cont++;
 
             }
-
-            if(NMR != VET[I])
-            {
-                System.out.println("O número " + NMR + " não foi encontrado no Vetor.");
+            else if (cont == 15){
+                System.out.println("Número não encontrado!");
             }
         }
-
-
     }
 }
